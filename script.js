@@ -4,7 +4,7 @@ const API_KEY = 'AIzaSyBB8BvD1DFag4NCCzdWFk1V42EeiNuWahk'; // API Key yang sudah
 const RANGE = 'Sheet1!A2:D'; // Mengambil data dari Sheet1, kolom A sampai D
 
 function fetchSongs() {
-    const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${RANGE}?key=${API_KEY}`;
+    const url = https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${RANGE}?key=${API_KEY};
     
     fetch(url)
         .then(response => response.json())
@@ -23,62 +23,7 @@ function displaySongs(songs) {
             td.textContent = cell;
             row.appendChild(td);
         });
-
-        // Tambahkan checkbox untuk memilih lagu yang akan dihapus
-        const checkboxTd = document.createElement('td');
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkboxTd.appendChild(checkbox);
-        row.appendChild(checkboxTd);
-
         tbody.appendChild(row);
-    });
-}
-
-function addSong() {
-    const title = document.getElementById('titleInput').value.trim();
-    const artist = document.getElementById('artistInput').value.trim();
-    const category = document.getElementById('categoryInput').value.trim();
-    const key = document.getElementById('keyInput').value.trim();
-
-    if (!title || !artist || !category || !key) {
-        alert('Semua kolom harus diisi!');
-        return;
-    }
-
-    const tbody = document.querySelector('#songList tbody');
-    const row = document.createElement('tr');
-
-    [title, artist, category, key].forEach(text => {
-        const td = document.createElement('td');
-        td.textContent = text;
-        row.appendChild(td);
-    });
-
-    // Tambahkan checkbox untuk memilih lagu yang akan dihapus
-    const checkboxTd = document.createElement('td');
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkboxTd.appendChild(checkbox);
-    row.appendChild(checkboxTd);
-
-    tbody.appendChild(row);
-
-    // Kosongkan input setelah menambah lagu
-    document.getElementById('titleInput').value = '';
-    document.getElementById('artistInput').value = '';
-    document.getElementById('categoryInput').value = '';
-    document.getElementById('keyInput').value = '';
-}
-
-function deleteSelectedSongs() {
-    const tbody = document.querySelector('#songList tbody');
-    const rows = Array.from(tbody.querySelectorAll('tr'));
-    rows.forEach(row => {
-        const checkbox = row.querySelector('input[type="checkbox"]');
-        if (checkbox && checkbox.checked) {
-            tbody.removeChild(row);
-        }
     });
 }
 
