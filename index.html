@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update List Lagu 2024</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Daftar Lagu</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Update List Lagu 2024</h1>
-    <button onclick="shuffleSongs()">Acak Lagu</button>
-    <table id="songList">
+    <h1>Daftar Lagu</h1>
+
+    <!-- Form untuk menambahkan lagu -->
+    <div class="form-container">
+        <input type="text" id="songInput" placeholder="Masukkan judul lagu">
+        <button onclick="addSong()">Tambah Lagu</button>
+    </div>
+
+    <!-- Tabel untuk menampilkan daftar lagu -->
+    <table id="songTable">
         <thead>
             <tr>
-                <th>Judul</th>
-                <th>Penyanyi/Band</th>
-                <th>Kategori</th>
-                <th>Nada Dasar</th>
+                <th>Lagu</th>
+                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
-            <!-- Data lagu akan ditambahkan di sini -->
+            <!-- Data lagu akan ditampilkan di sini -->
         </tbody>
     </table>
+
     <script src="script.js"></script>
 </body>
 </html>
