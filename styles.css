@@ -17,7 +17,7 @@ table {
     margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    overflow: hidden;
+    overflow: hidden; /* untuk menghindari sudut tajam pada border radius */
     animation: fadeIn 0.5s ease-in;
 }
 
@@ -49,23 +49,6 @@ button {
 
 button:hover {
     background-color: #45a049;
-}
-
-#addSongForm {
-    margin-top: 20px;
-    text-align: center;
-}
-
-#addSongForm input {
-    margin: 5px;
-    padding: 10px;
-    width: calc(25% - 22px);
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-#addSongForm button {
-    margin-top: 10px;
 }
 
 @media (max-width: 600px) {
