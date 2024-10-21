@@ -16,12 +16,27 @@
                 <th>Penyanyi/Band</th>
                 <th>Kategori</th>
                 <th>Nada Dasar</th>
+                <th>Pilih</th>
             </tr>
         </thead>
         <tbody>
             <!-- Data lagu akan ditambahkan di sini -->
         </tbody>
     </table>
+
+    <!-- Form untuk menambah lagu -->
+    <div id="addSongForm">
+        <h2>Tambah Lagu</h2>
+        <input type="text" id="titleInput" placeholder="Judul Lagu" required>
+        <input type="text" id="artistInput" placeholder="Penyanyi/Band" required>
+        <input type="text" id="categoryInput" placeholder="Kategori" required>
+        <input type="text" id="keyInput" placeholder="Nada Dasar" required>
+        <button onclick="addSong()">Tambah Lagu</button>
+    </div>
+
+    <!-- Tombol untuk menghapus lagu yang dipilih -->
+    <button onclick="deleteSelectedSongs()">Hapus Lagu Terpilih</button>
+
     <script src="script.js"></script>
 </body>
 </html>
