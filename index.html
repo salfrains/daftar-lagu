@@ -8,26 +8,20 @@
 </head>
 <body>
     <h1>Daftar Lagu</h1>
-
-    <!-- Form untuk menambahkan lagu -->
-    <div class="form-container">
-        <input type="text" id="songInput" placeholder="Masukkan judul lagu">
-        <button onclick="addSong()">Tambah Lagu</button>
-    </div>
-
-    <!-- Tabel untuk menampilkan daftar lagu -->
-    <table id="songTable">
+    <button onclick="shuffleSongs()">Acak Lagu</button>
+    <table id="songList">
         <thead>
             <tr>
-                <th>Lagu</th>
-                <th>Aksi</th>
+                <th>Judul</th>
+                <th>Penyanyi/Band</th>
+                <th>Kategori</th>
+                <th>Nada Dasar</th>
             </tr>
         </thead>
         <tbody>
-            <!-- Data lagu akan ditampilkan di sini -->
+            <!-- Data lagu akan ditambahkan di sini -->
         </tbody>
     </table>
-
     <script src="script.js"></script>
 </body>
 </html>
