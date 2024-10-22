@@ -90,3 +90,66 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Responsivitas untuk perangkat kecil */
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+
+    header {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    table, th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Mengubah tabel menjadi tampilan vertikal */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #f9f9f9;
+    }
+
+    tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    tbody td {
+        display: block;
+        text-align: right;
+        font-size: 14px;
+        padding: 8px;
+        position: relative;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #333;
+    }
+}
