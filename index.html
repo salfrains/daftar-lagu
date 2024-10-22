@@ -4,24 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Lagu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Daftar Lagu</h1>
-    <button onclick="shuffleSongs()">Acak Lagu</button>
-    <table id="songList">
-        <thead>
-            <tr>
-                <th>Judul</th>
-                <th>Penyanyi/Band</th>
-                <th>Kategori</th>
-                <th>Nada Dasar</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Data lagu akan ditambahkan di sini -->
-        </tbody>
-    </table>
+    <header>
+        <h1>Daftar Lagu Favorit</h1>
+    </header>
+
+    <main>
+        <button onclick="shuffleSongs()">Acak Lagu</button>
+        <table id="songList">
+            <thead>
+                <tr>
+                    <th>Judul</th>
+                    <th>Penyanyi/Band</th>
+                    <th>Kategori</th>
+                    <th>Nada Dasar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data lagu akan ditambahkan di sini -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>© 2024 Musikku. All rights reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
