@@ -4,7 +4,7 @@ const API_KEY = 'AIzaSyBB8BvD1DFag4NCCzdWFk1V42EeiNuWahk'; // API Key yang sudah
 const RANGE = 'Sheet1!A2:D'; // Mengambil data dari Sheet1, kolom A sampai D
 
 function fetchSongs() {
-    const url = https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${RANGE}?key=${API_KEY};
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${RANGE}?key=${API_KEY}`;
     
     fetch(url)
         .then(response => response.json())
@@ -38,3 +38,4 @@ function shuffleSongs() {
 
 // Memuat data lagu saat halaman dimuat
 window.onload = fetchSongs;
+
